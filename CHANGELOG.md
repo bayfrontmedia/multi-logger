@@ -12,6 +12,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - `Fixed` for any bug fixes.
 - `Security` in case of vulnerabilities
 
+## [1.1.0] - 2023.08.16
+
+### Added
+
+- Added `ChannelName` class to provide consistency when referencing log channels.
+
 ## [1.0.0] - 2023.08.11
 
 ### Added

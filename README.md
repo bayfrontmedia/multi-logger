@@ -39,17 +39,45 @@ In some cases, you may still need to interact with the `Monolog\Logger` object d
 
 A `Logger` instance must be passed to the constructor, and will automatically be set as the default and current channel.
 
+To aid in consistency when referencing log channels, the `Bayfront\MultiLogger\ChannelName` class contains constants with suggested channel names, including:
+
+- `APP`
+- `AUDIT`
+- `CLI`
+- `DATABASE`
+- `CONTROLLER`
+- `DEV`
+- `ERROR`
+- `HEALTH`
+- `HTTP`
+- `JOB`
+- `MODEL`
+- `NOTIFICATION`
+- `OPS`
+- `PRIVILEGES`
+- `PROD`
+- `QA`
+- `QUEUE`
+- `REQUEST`
+- `RESPONSE`
+- `ROUTER`
+- `SCHEDULE`
+- `SECURITY`
+- `STAGING`
+- `STORAGE`
+
 **Example:**
 
 ```php
+use Bayfront\MultiLogger\ChannelName;
 use Bayfront\MultiLogger\Log;
 use Monolog\Logger;
 use Monolog\Handler\FirePHPHandler;
 
-$my_logger = new Logger('my_logger');
-$my_logger->pushHandler(new FirePHPHandler());
+$app_channel = new Logger(ChannelName::APP);
+$app_channel->pushHandler(new FirePHPHandler());
 
-$log = new Log($my_logger);
+$log = new Log($app_channel);
 ```
 
 ### Public methods
@@ -142,14 +170,15 @@ If an existing instance exists with the same name, it will be overwritten.
 
 **Example:**
 
-```
+```php
+use Bayfront\MultiLogger\ChannelName;
 use Monolog\Logger;
 use Monolog\Handler\FirePHPHandler;
 
-$my_logger = new Logger('my_logger');
-$my_logger->pushHandler(new FirePHPHandler());
+$audit_channel = new Logger(ChannelName::AUDIT);
+$audit_channel->pushHandler(new FirePHPHandler());
 
-$log->addChannel($my_logger);
+$log->addChannel($audit_channel);
 ```
 
 <hr />
@@ -171,7 +200,7 @@ Does channel name exist?
 **Example:**
 
 ```
-if ($log->isChannel('App')) {
+if ($log->isChannel(ChannelName::APP)) {
     // Do something
 }
 ```
@@ -201,7 +230,7 @@ Returns `Logger` instance for a given channel.
 ```
 try {
 
-    $app_logger = $log->getChannel('App');
+    $app_channel = $log->getChannel(ChannelName::APP);
 
 } catch (ChannelNotFoundException $e) {
     die($e->getMessage());
@@ -235,7 +264,7 @@ By default, all logged events will be logged to the default channel used in the 
 ```
 try {
     
-    $log->channel('Dev')->info('This is an informational log message.');
+    $log->channel(ChannelName::AUDIT)->info('This is an informational log message.');
     
 } catch (ChannelNotFoundException $e) {
     die($e->getMessage());
