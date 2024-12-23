@@ -9,29 +9,29 @@ class ChannelName
      * Possible channel names
      */
 
-    public const string APP = 'APP';
-    public const string AUDIT = 'AUDIT';
-    public const string CLI = 'CLI';
-    public const string DATABASE = 'DATABASE';
-    public const string CONTROLLER = 'CONTROLLER';
-    public const string DEV = 'DEV';
-    public const string ERROR = 'ERROR';
-    public const string HEALTH = 'HEALTH';
-    public const string HTTP = 'HTTP';
-    public const string JOB = 'JOB';
-    public const string MODEL = 'MODEL';
-    public const string NOTIFICATION = 'NOTIFICATION';
-    public const string OPS = 'OPS';
-    public const string PRIVILEGES = 'PRIVILEGES';
-    public const string PROD = 'PROD';
-    public const string QA = 'QA';
-    public const string QUEUE = 'QUEUE';
-    public const string REQUEST = 'REQUEST';
-    public const string RESPONSE = 'RESPONSE';
-    public const string ROUTER = 'ROUTER';
-    public const string SCHEDULE = 'SCHEDULE';
-    public const string SECURITY = 'SECURITY';
-    public const string STAGING = 'STAGING';
-    public const string STORAGE = 'STORAGE';
+    public const APP = 'APP';
+    public const AUDIT = 'AUDIT';
+    public const CLI = 'CLI';
+    public const DATABASE = 'DATABASE';
+    public const CONTROLLER = 'CONTROLLER';
+    public const DEV = 'DEV';
+    public const ERROR = 'ERROR';
+    public const HEALTH = 'HEALTH';
+    public const HTTP = 'HTTP';
+    public const JOB = 'JOB';
+    public const MODEL = 'MODEL';
+    public const NOTIFICATION = 'NOTIFICATION';
+    public const OPS = 'OPS';
+    public const PRIVILEGES = 'PRIVILEGES';
+    public const PROD = 'PROD';
+    public const QA = 'QA';
+    public const QUEUE = 'QUEUE';
+    public const REQUEST = 'REQUEST';
+    public const RESPONSE = 'RESPONSE';
+    public const ROUTER = 'ROUTER';
+    public const SCHEDULE = 'SCHEDULE';
+    public const SECURITY = 'SECURITY';
+    public const STAGING = 'STAGING';
+    public const STORAGE = 'STORAGE';
 
 }
