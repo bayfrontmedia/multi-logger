@@ -9,6 +9,8 @@ class ChannelName
      * Possible channel names
      */
 
+    public const ACTIVITY = 'ACTIVITY';
+    public const API = 'API';
     public const APP = 'APP';
     public const AUDIT = 'AUDIT';
     public const CLI = 'CLI';
@@ -33,5 +35,5 @@ class ChannelName
     public const SECURITY = 'SECURITY';
     public const STAGING = 'STAGING';
     public const STORAGE = 'STORAGE';
-
+    public const SYSTEM = 'SYSTEM';
 }
